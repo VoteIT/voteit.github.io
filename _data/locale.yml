@@ -12,8 +12,8 @@ nav:
 electron_is_easy:
   title: It's easier than you think
   description:
-    If you need to have a meeting where you need to make decisions, you can use VoteIT. VoteIT is a
-    digital tool for creating and facilitation decision making meetings. It takes care of the boring parts so you can
+    If you need to meet and make decisions, you can use VoteIT. VoteIT is a
+    tool for creating and facilitating decision making meetings. It takes care of the boring parts so you can
     focus on the joy of your meeting.
   video_link: Watch the video
 
@@ -26,14 +26,14 @@ web_technologies:
 open_source:
   title: Open Source
   desciption:
-    Electron is an open source project maintained by GitHub and an active
-    community of contributors.
+    VoteIT is an open source project maintained by the VoteIT non-profit organization and has an active
+    community of members, contributors and supporters.
 
 cross_platform:
   title: Cross Platform
   description:
-    Compatible with Mac, Windows, and Linux, Electron apps build and run on
-    three platforms.
+    VoteIT runs straight in your browser of choice. Compatible with web browsers on macOS, Windows, Linux, Android and iOS, VoteIT simply runs on
+    your platform of choice.
 
 benefits:
   hard_parts_made_easy: The hard parts made easy
