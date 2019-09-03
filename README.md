@@ -1,6 +1,6 @@
 # electron.atom.io
 
-This is the source code for the [Electron website](http://electron.atom.io). It's a static [Jekyll](https://jekyllrb.com) site hosted on [GitHub Pages](https://pages.github.com).
+This is the source code for the [VoteIT website](http://voteit.github.io). It's a static [Jekyll](https://jekyllrb.com) site hosted on [GitHub Pages](https://pages.github.com).
 
 ## Contributing
 
