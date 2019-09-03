@@ -1,0 +1,44 @@
+
+// Colors -----------------------
+
+// main
+$main-bg-color:       hsl(190, 12%,100%);
+$main-bg-color-shade: hsl(190, 12%, 97%);
+$main-color-subtle:   hsl(190, 12%, 42%);
+$main-color:          hsl(190, 24%, 26%);
+$main-color-strong:   hsl(190, 48%, 18%);
+
+$main-border-color:   hsl(190, 12%, 84%);
+$main-link-color:     hsl(208, 96%, 40%);
+
+// Jumbo
+$jumbo-bg-color:     hsl(230, 16%, 20%);
+$jumbo-color-subtle: hsl(190, 33%, 58%);
+$jumbo-color:        hsl(190, 66%, 72%);
+$jumbo-color-strong: hsl(190, 99%, 88%);
+
+// Sub
+$sub-bg-color:     $main-bg-color-shade;
+
+// Mini
+$mini-bg-color:     hsl(230, 24%, 36%);
+$mini-color:        hsl(230, 24%, 80%);
+$mini-color-link:   hsl(230, 24%, 100%);
+
+// Accent
+$accent-color: hsl(335, 87%, 47%);
+
+
+// Basecoat overrides
+
+$theme-color: $main-color-strong;
+
+$body-color:    $main-color;
+$heading-color: $main-color-strong;
+
+$border-color: $main-border-color;
+
+// Incrase xl breakpoit
+// So that containers start breaking before touching the edge
+// Default: $container-max-widths: ( xl: 1260px );
+$grid-breakpoints: map-merge($grid-breakpoints, (xl: 1300px));

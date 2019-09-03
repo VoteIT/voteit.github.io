@@ -1,0 +1,73 @@
+---
+title: Apps
+permalink: /apps/
+layout: default
+excerpt: See some of the amazing apps built on Electron.
+---
+
+<script src="{{site.baseurl}}/js/vendor/list.min.js"></script>
+<script src="{{site.baseurl}}/js/vendor/query-string.js"></script>
+<script src="{{site.baseurl}}/js/vendor/set-query-string.js"></script>
+<script src="{{site.baseurl}}/js/vendor/browser-date-formatter.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', createFilterList)
+  document.addEventListener('DOMContentLoaded', browserDateFormatter)
+
+  function createFilterList () {
+    // look for a filterable list on this page
+    var list = document.querySelector('.filterable-list')
+    if (!list || !list.parentElement) return
+
+    // inherit initial query from `?q` in query string
+    window.filterInput = document.querySelector('.filterable-list-input')
+    filterInput.value = queryString.parse(location.search).q || ''
+
+    var opts = {
+      listClass: 'filterable-list',
+      searchClass: 'filterable-list-input',
+      valueNames: [
+        'listed-app-name',
+        'listed-app-description',
+        'listed-app-date',
+        'listed-app-keywords'
+      ]
+    }
+    window.filterList = new List(list.parentElement, opts)
+
+    // trigger a search, in case there is an existing value in the text input
+    filterList.search(filterInput.value)
+
+    // update the query param every time a search is performed
+    filterList.on('updated', function() {
+      setQueryString({q: filterInput.value})
+    })
+  }
+</script>
+
+
+<div class='subtron'>
+  <div class='container-narrow'>
+    <h1>Apps Built on Electron</h1>
+    <p>We currently have {{ site.data.apps | size }} apps in our registry.</p>
+  </div>
+</div>
+
+<section class='page-section'>
+  <div class='container-narrow text-center' id="apps">
+
+    <input class="filterable-list-input" placeholder="Filter apps by name, description, keyword, date..." aria-label="Filter apps by name, description, keyword, date" type="search" autofocus="on" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
+    <ul class="mb-4 filterable-list app-list">
+      {% assign sortedApps = site.data.apps | sort:"date" %}
+      {% for app in sortedApps reversed %}
+        {% include listed_app.html %}
+      {% endfor %}
+    </ul>
+
+    <p class="mt-6">
+      <a href="https://github.com/electron/electron.atom.io/blob/gh-pages/CONTRIBUTING.md#adding-an-app-or-project-to-the-site">Make a Pull Request</a> to add your application.
+    </p>
+    <hr>
+  </div>
+</section>
