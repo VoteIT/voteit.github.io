@@ -1,3 +1,7 @@
+# Archived
+
+This project isn't active
+
 # electron.atom.io
 
 This is the source code for the [VoteIT website](http://voteit.github.io). It's a static [Jekyll](https://jekyllrb.com) site hosted on [GitHub Pages](https://pages.github.com).
